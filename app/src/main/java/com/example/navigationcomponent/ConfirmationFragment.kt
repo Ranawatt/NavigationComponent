@@ -32,7 +32,7 @@ class ConfirmationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val amount = money!!.amount
+        val amount = money.amount
         val confirmationMessage = " you have sent $amount to $recipient"
         view.findViewById<TextView>(R.id.confirmation_message).text = confirmationMessage
     }

@@ -40,7 +40,7 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener {
             R.id.next_btn -> {
                 if (!TextUtils.isEmpty(input_recipient.text.toString())){
                     val  bundle = bundleOf("recipient" to input_recipient.text.toString())
-                    navController!!.navigate(R.id.action_chooseRecepientFragment_to_specifyAmountFragment,
+                    navController.navigate(R.id.action_chooseRecepientFragment_to_specifyAmountFragment,
                     bundle)
                 }
 
