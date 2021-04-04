@@ -12,10 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.onNavDestinationSelected
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+import androidx.navigation.ui.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -41,8 +38,7 @@ class MainActivity : AppCompatActivity() {
         // You should also remove the old appBarConfiguration setup above
         val drawerLayout : DrawerLayout? = findViewById(R.id.drawer_layout)
         appBarConfiguration = AppBarConfiguration(
-                setOf(R.id.home_dest, R.id.deeplink_dest),
-                drawerLayout)
+                setOf(R.id.home_dest, R.id.deeplink_dest), drawerLayout)
         // TODO END STEP 9.5
 
         setupActionBar(navController, appBarConfiguration)
@@ -121,6 +117,6 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
 //        // Allows NavigationUI to support proper up navigation or the drawer layout
 //        // drawer menu, depending on the situation
-        return findNavController(R.id.my_nav_host_fragment).navigateUp()
+        return findNavController(R.id.my_nav_host_fragment).navigateUp(appBarConfiguration)
     }
 }
