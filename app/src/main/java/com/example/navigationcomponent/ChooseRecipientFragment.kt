@@ -43,7 +43,6 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener {
                     navController.navigate(R.id.action_chooseRecepientFragment_to_specifyAmountFragment,
                     bundle)
                 }
-
             }
             R.id.cancel_btn -> requireActivity().onBackPressed()
 
