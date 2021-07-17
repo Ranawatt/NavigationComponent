@@ -15,7 +15,7 @@ import androidx.navigation.Navigation
  */
 class MainFragment : Fragment(), View.OnClickListener {
 
-    var navController : NavController? = null
+    private var navController : NavController? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

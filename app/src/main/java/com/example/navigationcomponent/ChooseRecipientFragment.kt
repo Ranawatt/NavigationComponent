@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_choose_recepient.*
  */
 class ChooseRecipientFragment : Fragment(), View.OnClickListener {
 
-    lateinit var navController : NavController
+    private lateinit var navController : NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,7 +45,7 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener {
                 }
 
             }
-            R.id.cancel_btn -> activity!!.onBackPressed()
+            R.id.cancel_btn -> requireActivity().onBackPressed()
 
         }
 

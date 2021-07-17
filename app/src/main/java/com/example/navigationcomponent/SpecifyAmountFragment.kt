@@ -21,12 +21,12 @@ import java.math.BigDecimal
  */
 class SpecifyAmountFragment : Fragment() ,View.OnClickListener{
 
-    lateinit var  navController : NavController
-    lateinit var  recipient : String
+    private lateinit var  navController : NavController
+    private lateinit var  recipient : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        recipient = arguments!!.getString("recipient")!!
+        recipient = requireArguments().getString("recipient")!!
     }
 
     override fun onCreateView(
@@ -61,7 +61,7 @@ class SpecifyAmountFragment : Fragment() ,View.OnClickListener{
                 }
 
             }
-            R.id.cancel_btn -> activity!!.onBackPressed()
+            R.id.cancel_btn -> requireActivity().onBackPressed()
         }
 
     }

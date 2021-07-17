@@ -12,13 +12,13 @@ import android.widget.TextView
 class ConfirmationFragment : Fragment() {
 
 
-    lateinit var recipient : String
-    lateinit var money : Money
+    private lateinit var recipient : String
+    private lateinit var money : Money
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        recipient = arguments!!.getString("recipient").toString()
-        money = arguments!!.getParcelable("amount")!!
+        recipient = requireArguments().getString("recipient").toString()
+        money = requireArguments().getParcelable("amount")!!
     }
 
     override fun onCreateView(
