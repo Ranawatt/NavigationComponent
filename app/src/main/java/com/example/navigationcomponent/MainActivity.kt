@@ -18,22 +18,22 @@ import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-//    private lateinit var appBarConfiguration : AppBarConfiguration
+    private lateinit var appBarConfiguration : AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-//        setSupportActionBar(toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        val host: NavHostFragment = supportFragmentManager
+            .findFragmentById(R.id.my_nav_host_fragment) as NavHostFragment? ?: return
 //
-//        val host: NavHostFragment = supportFragmentManager
-//            .findFragmentById(R.id.my_nav_host_fragment) as NavHostFragment? ?: return
-//
-//        // Set up Action Bar
-//        val navController = host.navController
-//
-////        appBarConfiguration = AppBarConfiguration(navController.graph)
+        // Set up Action Bar
+        val navController = host.navController
+
+        appBarConfiguration = AppBarConfiguration(navController.graph)
 //        // TODO STEP 9.5 - Create an AppBarConfiguration with the correct top-level destinations
 //        // You should also remove the old appBarConfiguration setup above
 //        val drawerLayout : DrawerLayout? = findViewById(R.id.drawer_layout)
